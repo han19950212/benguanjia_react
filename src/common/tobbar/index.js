@@ -8,25 +8,18 @@ import {
 class Tobbar extends Component{
     
     render(){
+        console.log(this.props.tab)
+        const {tab} = this.props;
         return(
             <TobbarWrapper>
-                <TobbarBotton>
-                    <i className='iconfont'>&#xe677;</i>
-                    首页
+                {
                     
-                </TobbarBotton>
-                <TobbarBotton>
-                    <i className='iconfont'>&#xe643;</i>
-                    抢单
-                 </TobbarBotton>
-                <TobbarBotton>
-                    <i className='iconfont'>&#xe61a;</i>    
-                    订单
-                </TobbarBotton>
-                <TobbarBotton>
-                    <i className='iconfont'>&#xe639;</i>    
-                    我的
-                </TobbarBotton>
+                    tab.map((item,index)=>{
+                        return <TobbarBotton key={index} >{item.ico}</TobbarBotton>
+                     })
+                }
+      
+               
             </TobbarWrapper>
         )
     }
@@ -34,7 +27,7 @@ class Tobbar extends Component{
 
 const mapState = (state)=>{
     return{
-        
+        tab:state.tobbar.get('tab')     
     }
 }
 
