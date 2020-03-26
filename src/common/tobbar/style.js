@@ -5,12 +5,20 @@ export const TobbarWrapper = styled.div`
     bottom:0;
     left:0;
     width:100%;
-    display:flex;
     border-top:1px solid #dcdcdc;
     height:52.5px;
+    display:flex;
+    .clickIconfont{
+        color:red;
+    }
+    .link{ 
+        flex:1;
+        display:block;
+    }
 `
 export const TobbarBotton = styled.div`
-    flex:1;
+    width:100%;
+    height:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -21,4 +29,5 @@ export const TobbarBotton = styled.div`
         display:block;
         margin-bottom:5px;
     }
+ 
 `;
